@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>car details</title>
+        <style>
+            table,th,td{
+                border: 2px solid black;
+            }
+        </style>
+        <br>
+        <h4>DETAILS OF cars</h4>
+        <br><form name="form">
+          Enter the car : <input type="text" id="cname"><br><br>
+            <input type="button" value="submit" onclick="display()">
+        </form>
+        <br><br>
+        <table></table>
+        <script>
+            function display()
+            {
+                
+                var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function(){
+                    if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                        var xmldoc=xmlhttp.responseXML;
+                        var x=xmldoc.getElementsByTagName("car");
+                        alert("hii");
+                        var k=document.getElementById("bname").value;
+                        for(i=0;i<x.length;i++)
+                        {
+                           if(k.match(x[i].getElementsByTagName('bookid')[0].childNodes[0].nodeValue)){
+                          document.getElementById("books").innerHTML="<tr><th>Bookid</th><td> "+x[i].getElementsByTagName('bookid')[0].childNodes[0].nodeValue+"</td></tr><tr><th> name </th><td>"+x[i].getElementsByTagName('name')[0].childNodes[0].nodeValue+"</td></tr><tr><th>price</th><td> "+x[i].getElementsByTagName('price')[0].childNodes[0].nodeValue+"</td></tr><tr><th>author</th><td> "+x[i].getElementsByTagName('author')[0].childNodes[0].nodeValue+"</td></tr>";
+                     
+                            
+                }
+                       
+            }
+                        
+                    }
+              }
+                xmlhttp.open("get","car.xml",true);
+                xmlhttp.send();
+            }
+        </script>
+        
+    </body>
+</html>

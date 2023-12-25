@@ -1,0 +1,149 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>1</title>    
+    <style type="text/css">  
+body {
+background-color:#B5235C;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 90%;   
+font-family: Calibri;    
+        }    
+        input[type="text"] {    
+            width: 250px;    
+        }       
+        form{    
+            text-align: center;    
+            font-family: Calibri;    
+            font-size: 20px;    
+            border: 3px solid black;    
+            width: 600px;    
+            margin: 20px auto;    
+        }    
+        td {    
+            padding: 10px;    
+        }       
+    
+    </style>    
+    <script>    
+        function validate() {    
+            var name = document.reg_form.name;    
+            var email = document.reg_form.email;    
+            var password = document.reg_form.password;    
+            var phone n0= document.reg_form.phone number;    
+            var gender= document.reg_form.gender;    
+            var zipcode = document.reg_form.zipcode;    
+            var language= document.reg_form.language;  
+            var address= document.reg_form.address;  
+    
+            if (name.value.length <= 0) {    
+                alert("Name is required");    
+                name.focus();    
+                return false;    
+            }    
+            if (email.value.length <= 0) {    
+                alert("email id is required");    
+                email.focus();    
+                return false;    
+            }    
+            if (phone no.value.length <= 0) {    
+                alert("Address is required");    
+                address.focus();    
+                return false;    
+            }    
+            if (gender.value.length <= 0) {    
+                alert("Gender is required");    
+                gender.focus();    
+                return false;    
+            }    
+            if (zipcode.value.length <= 0) {    
+                alert("zipcode is required");    
+                zipcode.focus();    
+                return false;    
+            }    
+            if (language.value=="select language") {    
+                alert("please select language");    
+                language.focus();    
+                return false;    
+            }    
+            if (address.value == "select course") {    
+                alert("address is missing");    
+                address.focus();    
+                return false;    
+            }    
+            return false;    
+        }    
+    </script>    
+</head>    
+<body>    
+    <center><h1>Form Validation using JavaScript</h1></center>    
+    <hr>    
+    <form method="" action="" name="reg_form" onsubmit="return validate()">        
+        <table>    
+            <tr>    
+                <td><label>Name: </label></td>    
+                <td>    
+                    <input type="text" name="name" placeholder="your name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>E mail: </label></td>    
+                <td>    
+                    <input type="text" name="email" placeholder="your email">    
+                </td>    
+            </tr>   
+               <tr>  
+                <td><label>Password: </label></td>    
+                <td>    
+                    <input type="text" name="password" placeholder="valid password">    
+                </td>    
+            </tr>    
+              <tr>    
+                <td><label>Phone no: </label></td>    
+                <td>    
+                    <input type="number" name="Phone no" placeholder="valid ph no">        
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>Gender: </label></td>    
+                <td>    
+                    <input type="radio" name="gender" value="male">Male    
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="others">others        
+                </td>    
+            </tr>   
+             <tr>    
+                <td><label>Zip code: </label></td>    
+                <td>    
+                    <input type="number" name="Zip code"> 
+                </td>    
+            </tr>       
+            <tr>    
+            <td><label>Language: </label></td>    
+                <td>    
+                    <select name="language">    
+                        <option value="select language">select language</option>    
+                        <option value="Tamil">Tamil</option>    
+                        <option value="English">English</option>    
+                        <option value="French">French</option>    
+                        <option value="Spanish">Spanish</option>    
+                    </select>    
+                </td>    
+            </tr>  
+               <tr>
+<td>
+Address:
+</td>
+<td>
+<textarea rows="5" col="17" placeholder="Address"></textarea>
+</td>
+</tr>
+<center> <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Register" /></td>
+            </tr>  
+        </table>    
+    </form>    
+</body>    
+</html>

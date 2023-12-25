@@ -1,0 +1,93 @@
+<html>
+<head>
+	<title>FORM VALIDATION USING PHP</title>
+
+</head>
+<body>
+
+<center>
+	<h1>Form validation using PHP</h1>
+	<fieldset>
+		<form id="form1" method="post" action="form.php">
+				Name:
+				<input type="text" name="name" placeholder="your name"/>
+				<br>
+				<br>
+				Email:
+				<input type="email" name="emailaddress" placeholder="valid mailid"/>
+				<br>
+				<br>
+				Password:
+				<input type="password" name="password"/>
+				<br>
+				<br>
+				Phonenumber:
+				<input type="number" name="phonenumber" placeholder="valid phno"/>
+				<br>
+				<br>
+                        Gender:
+				<input type="radio" value="Male" name="gender"> Male
+				<input type="radio" value="Female" name="gender">Female
+                        <input type="radio" value="others" name="gender"> Others
+                        <br>
+                        <br>
+                        Language:
+                        <input type:"text" name="language" placeholder="Select language"/>   
+                          <br>
+                           <br> 
+				Zipcode:
+				<input type="zipcode" name="zipcode"/>
+				<br>
+				<br>
+                         About:
+				<textarea rows="3" col="10" placeholder="About"></textarea>
+				<br>
+				<br>
+				<input type="submit" value="submit" name="submit" />
+		</form>
+	</fieldset>
+	<?php
+      echo "<body style='background-color:#B5235C'>";
+	if(isset($_POST['submit']))
+	{
+		if(!isset($error))
+		{
+				echo "<tr>";
+				echo "<td>Name</td>";
+				echo "<td>".$name."</td>";
+				echo "</tr>";
+				echo "<tr>";
+				echo "<td>Email</td>";
+				echo "<td>".$email."</td>";
+				echo "</tr>";
+				echo "<tr>";
+				echo "<td>Password</td>";
+				echo "<td>".$password."</td>";
+				echo "</tr>";
+				echo "<tr>";
+				echo "<td>Phonenumber</td>";
+				echo "<td>" .$phonenumber."</td>";
+				echo "</tr>";
+				echo "<tr>";
+				echo "<td>Gender</td>";
+				echo "<td>".$gender."</td>";
+				echo "</tr>";
+				echo "<tr>";
+				echo "<td>Language</td>";
+				echo "<td>".$language."</td>";
+				echo "</tr>";
+                        echo "<tr>";
+				echo "<td>Zipcode</td>";
+				echo "<td>".$zipcode."</td>";
+				echo "</tr>";
+                        echo "<tr>";
+				echo "<td>About</td>";
+				echo "<td>".$About."</td>";
+				echo "</tr>";
+				echo "</table>";
+		}
+	}
+	?>
+</center>
+</body>
+</html>

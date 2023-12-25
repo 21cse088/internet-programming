@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <body>
+<script>
+function filter_array_values(arr) {
+  arr = arr.filter(isEligible);
+  return arr;
+}
+
+function isEligible(value) {
+  if(value !== false || value !== null || value !== 0 || value !== "") {
+    return value;
+  }
+}
+
+console.log(filter_array_values([NaN, 0, 15, false, -22, '',undefined, 47, null]))
+</script>
+</body>
+</body>
+</html>

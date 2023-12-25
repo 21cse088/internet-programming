@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <body>
+<h2>the first character of the string is uppercase</h2>
+<p id="demo"></p>
+<script>
+function myFunction(s) {
+
+const remaining = s.substring(1)
+const firstLetter = s.substring(0,1);
+
+const firstLetterCap = firstLetter.toUpperCase()
+return firstLetterCap+remaining;
+}
+document.getElementById("demo").innerHTML =
+myFunction("srinandhini");
+</script>
+</body>
+</body>
+</html>

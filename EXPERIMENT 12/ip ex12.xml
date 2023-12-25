@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<cars>
+<car>
+   
+    <name>audi</name>
+    <price>1,00000</price>
+
+</car>
+
+<car>
+    
+    <name>buggati</name>
+    <price>10,00000</price>
+   
+</car>
+
+<car>
+    
+    <name>bmw</name>
+    <price>2,000000</price>
+</car>
+
+<car>
+    
+    <name>toyota</name>
+    <price>6,00000</price>
+    
+</car>
+
+<car>
+    
+    <name>minikube</name>
+    <price></price>
+  
+</car>
+</cars>
+    
+</root>
