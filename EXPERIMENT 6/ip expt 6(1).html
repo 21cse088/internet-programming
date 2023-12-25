@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add to List</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		li {
+			margin: 5px 0;
+			padding: 5px;
+			border: 1px solid #ccc;
+			background-color: #f9f9f9;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		li span {
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Add to List</h1>
+	<form>
+		<label for="new-item">New item:</label>
+		<input type="text" id="new-item" name="new-item">
+		<button type="button" id="add-btn">Add to List</button>
+	</form>
+	<ul id="list">
+		<!-- Existing list items will go here -->
+	</ul>
+
+	<script>
+		$(document).ready(function() {
+			// Handle click event for add button
+			$('#add-btn').click(function() {
+				// Get input value
+				var newItem = $('#new-item').val();
+
+				// Append new list item to list
+				$('#list').append('<li><span>' + newItem + '</span><button class="delete-btn">X</button></li>');
+
+				// Clear input value
+				$('#new-item').val('');
+			});
+
+			// Handle click event for delete button (dynamic element)
+			$('#list').on('click', '.delete-btn', function() {
+				$(this).parent().remove();
+			});
+		});
+	</script>
+</body>
+</html>
